@@ -1,0 +1,6 @@
+pw = 'NotDisclosed'
+#password not given in code, but just needs to be replaced with own
+numb = '1234567899'
+address = '43100 Hay Rd'
+city = 'Ashburn'
+code = '20147'
