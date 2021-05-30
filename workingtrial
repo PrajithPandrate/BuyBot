@@ -1,0 +1,63 @@
+from selenium import webdriver
+#then we import in all the information that would be needed when filling out every blank
+from time import sleep
+from info import pw
+from info import numb
+from info import address
+from info import city
+from info import code
+
+def Bot(username,pw,numb,address,city,code):
+    driver = webdriver.Chrome()
+    driver.get("https://www.amazon.com/Town-Called-Potato-Galactic-Detective/dp/1734774126/ref=sr_1_5?dchild=1&keywords=space+potato&qid=1622314861&sr=8-5")
+    sleep(1)
+    #goes to the product that we have decided on
+    driver.find_element_by_xpath('//*[@id="add-to-cart-button"]')\
+        .click()
+    sleep(1)
+    #clicks the add to cart button
+    driver.find_element_by_xpath('/html/body/div[1]/div/div[3]/div[2]/div[1]/div/div/div[4]/div/div/div/span[2]/span/a')\
+        .click()
+    #clicks the checkout button
+    driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div[1]/form/div/div/div/div[1]/input[1]')\
+        .send_keys(username)
+    #enters in username
+    driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div[1]/form/div/div/div/div[2]/span/span/input')\
+        .click()
+    #clicks submit for username to go to next step
+    driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div/form/div/div[1]/input')\
+        .send_keys(pw)
+    #enters in password
+    driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div/form/div/div[2]/span/span/input')\
+        .click()
+    #clicks the log in button
+    driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[2]/div[1]/div/div[1]/form/div/div[1]/div/div[6]/input')\
+        .send_keys(numb)
+    #enters phone number
+    driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[2]/div[1]/div/div[1]/form/div/div[1]/div/div[8]/input')\
+        .send_keys(address)
+    sleep(1)
+    #enters address
+    driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[2]/div[1]/div/div[1]/form/div/div[1]/div/div[11]/div[1]/div[2]/input')\
+        .send_keys(city)
+    sleep(1)
+    #enters city name
+    driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[2]/div[1]/div/div[1]/form/div/div[1]/div/div[11]/div[2]/div[2]/span/span/span/span')\
+        .click()
+    #clicks on state list
+    driver.find_element_by_xpath('/html/body/div[8]/div/div/ul/li[55]/a')\
+        .click()
+    #selects state in the list
+    sleep(1)
+    driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[2]/div[1]/div/div[1]/form/div/div[1]/div/div[11]/div[3]/div[2]/input')\
+        .send_keys(code)
+    #clicks into next
+    sleep(1)
+    driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[2]/div[1]/div/div[1]/form/div/span/span/span/input')\
+        .click()
+    sleep(2)
+    driver.find_element_by_xpath('/html/body/div[5]/div[1]/div[2]/div/div[1]/form/div[3]/div/div/span[1]/span/input')\
+        .click()
+    sleep (50)
+
+Bot('spacepotatospace@gmail.com', pw, numb, address, city, code)
