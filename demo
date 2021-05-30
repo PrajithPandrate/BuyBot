@@ -38,11 +38,9 @@ def Bot(username,pw,numb,address,city,code):
     #enters phone number
     driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[2]/div[1]/div/div[1]/form/div/div[1]/div/div[8]/input')\
         .send_keys(address)
-    sleep(1)
     #enters address
     driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[2]/div[1]/div/div[1]/form/div/div[1]/div/div[11]/div[1]/div[2]/input')\
         .send_keys(city)
-    sleep(1)
     #enters city name
     driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[2]/div[1]/div/div[1]/form/div/div[1]/div/div[11]/div[2]/div[2]/span/span/span/span')\
         .click()
@@ -50,7 +48,6 @@ def Bot(username,pw,numb,address,city,code):
     driver.find_element_by_xpath('/html/body/div[8]/div/div/ul/li[55]/a')\
         .click()
     #selects state in the list
-    sleep(1)
     driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[2]/div[1]/div/div[1]/form/div/div[1]/div/div[11]/div[3]/div[2]/input')\
         .send_keys(code)
     #clicks into next
