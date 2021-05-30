@@ -1,5 +1,5 @@
 from selenium import webdriver
-#then we import in all the information that would be needed when filling out every blank
+#then we import in all the information that would be needed when filling out every blank from the info file
 from time import sleep
 from info import pw
 from info import numb
@@ -51,7 +51,7 @@ def Bot(username,pw,numb,address,city,code):
     sleep(1)
     driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[2]/div[1]/div/div[1]/form/div/div[1]/div/div[11]/div[3]/div[2]/input')\
         .send_keys(code)
-    #clicks into next
+    #enters zip code
     sleep(1)
     driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[2]/div[1]/div/div[1]/form/div/span/span/span/input')\
         .click()
