@@ -1,4 +1,4 @@
-# BuyBot
+# BuyBot - Won the AcademiesHacks Hackathon with over 100+ particpants 
 BuyBot is an automatic shopping bot that can be used to easily shop online. Whenever checking out, all a customer needs to do is paste in their amazon link and the bot
 will do the rest. This means that there is no need for the customer to type in their repetitive information (username, password, name, email address, address, city, state, 
 zip code). At this stage, the only part the customer needs to fill out is the payment section. Although this follows the same procedure to code, I left it out as payment
